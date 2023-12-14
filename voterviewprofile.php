@@ -110,7 +110,7 @@ nav {
    
            </div>
 </div>
-<form  action="getdetails.php" method="POST" >
+<form  action="getdetails.php" method="POST" id="form">
     <div class="box">
         <center>
             <h3>My profile</h3>
@@ -121,10 +121,35 @@ nav {
         <br>
         <input type="text" name="vid" id="vid" placeholder ="Enter your voterID number">
 <br>
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit"  class="btn">Submit</button>
         
     </div>
 
     </form>
 </body>
+<script>
+    const vid=document.getElementById("vid");
+   
+    form.addEventListener("submit", (e) => {
+if (!validateInputs()) {
+  e.preventDefault();
+}
+});
+function validateInputs()
+{
+     const nvid = vid.value.trim();
+
+    if(nvid==="")
+    {
+        alert("Provide a valid voterID number");
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+
+}
+
+</script>
 </html>

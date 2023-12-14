@@ -35,7 +35,7 @@ if(mysqli_num_rows($result) === 1)
    if($row['username']=== $user && $row['password']=== $pass)
    {
    
-   header("Location: home1.html ");
+   header("Location: candidatehomepage.html ");
    }
 
 }

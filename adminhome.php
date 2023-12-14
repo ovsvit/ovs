@@ -85,7 +85,7 @@
         <div class="links">
             <ul class="body_nav">
                 <div class="my_profile">
-                    <li><a href="Release_Result"><center><img src="res4.png" width="125" height="125"></center><br><center>Release Result</center></a></li>
+                    <li><a href="result.php"><center><img src="res4.png" width="125" height="125"></center><br><center>Release Result</center></a></li>
                 </div>
             </ul>
         </div>
@@ -93,7 +93,7 @@
         <div class="links">
             <ul class="body_nav">
                 <div class="manage_voter">
-                    <li><a href="Manage_Voters"><center><img src="new.png" width="125" height="125"></center><br><center>Manage Voters</center></a></li>
+                    <li><a href="managevoter.php"><center><img src="new.png" width="125" height="125"></center><br><center>Manage Voters</center></a></li>
                 </div>
             </ul>
         </div>
@@ -101,7 +101,7 @@
         <div class="links">
             <ul class="body_nav">
                 <div class="manage_voter">
-                    <li><a href="Manage Candidates"><center><img src="new.png" width="125" height="125" ></center><br><center>Manage Candidates</center></a></li>
+                    <li><a href="managecandidate.php"><center><img src="new.png" width="125" height="125" ></center><br><center>Manage Candidates</center></a></li>
                 </div>
             </ul>
         </div>

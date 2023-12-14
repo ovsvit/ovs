@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="app_can.js" defer></script>
-    <title>Update Profile</title>
+    <title>Update Candidate Profile</title>
     <style>
         body{
                    
@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
     <fieldset class="field">
         <b>
-            <legend> <h2>Update Candidate Profile</h2>
+            <legend> <h2>Update Profile</h2>
                
             </legend>
         </b>

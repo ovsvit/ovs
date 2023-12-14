@@ -178,13 +178,13 @@ body
     
     <h2 id="topic">Welcome to Online Voting</h2>
     <div class="container">
-      <form  method="POST" id="form" >
+      <form action="success.php" method="POST" id="form" >
         <h2 >Create Your Account..</h2>
         
         <h4 id="home">
           Go to
           <a
-            href="C:\Users\Admin\Desktop\HTML AND CSS\index.html"
+            href="home1.html"
             target="-blank"
             >Home</a
           >
@@ -192,7 +192,7 @@ body
         <h4 id="login">
           Already have an account?
           <a
-            href="C:\Users\Admin\Desktop\HTML AND CSS\index.html"
+            href="voterlogin.php"
             target="-blank"
             >Login</a
           >

@@ -76,9 +76,7 @@
         <nav>
             <h1> Online Voting System:Admin page</h1>
             <ul class="head_nav">
-                <li class="head_list"><a href="home.html">Home</a></li>
-                <li>|</li>
-                <li><a href="logout.html">Logout</a></li>
+                <li><a href="home1.html">Logout</a></li>
             </ul>    
         </nav>
     </div>

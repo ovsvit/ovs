@@ -155,12 +155,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
     <fieldset class="field">
         <b>
-            <legend> <h2>Update Profile Candidate </h2>
+            <legend> <h2>Update Candidate Profile</h2>
                
             </legend>
         </b>
         
-        <form class="form" action="edit_candidate.php" method="post" id="form">
+        <form class="form" action="candidateviewprofile.php" method="post" id="form">
 
             <div class="inp-grp">
 

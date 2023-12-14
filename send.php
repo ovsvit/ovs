@@ -38,7 +38,7 @@ if(isset($_POST["send"])){
     "
     <script>
     alert('Confirmation mail has been Successfully sent');
-    document.location.href='conf_mail.php';
+    document.location.href='voterhome.html';
     </script>
     ";
 

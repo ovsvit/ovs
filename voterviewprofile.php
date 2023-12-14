@@ -144,6 +144,11 @@ function validateInputs()
         alert("Provide a valid voterID number");
         return false;
     }
+         else if(nvid.length < 10 || nvid.length > 10)
+    {
+        alert("Provide a valid VoterID number");
+        return false;
+    }
     else
     {
         return true;

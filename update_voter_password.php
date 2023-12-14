@@ -286,16 +286,6 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 </script>
 </html>
 
-
-<div class="bd-dark">
-         <div class="container">
-             <div class="row">
-                <div class="col">
-                   <div class="card mt-5">
-                       <div class="card-header">
-
-                       </div>
-                    </div>
                 </div>
             </div>
          </div>

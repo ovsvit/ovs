@@ -234,7 +234,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
         <h4 id="home">
           Go to
           <a
-            href="#"
+            href="home1.html"
             
             >Home</a
           >
@@ -242,7 +242,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
         <h4 id="login">
           Already have an account?
           <a
-            href="#"
+            href="voterlogin.php"
             
             >Login</a
           >

@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="app_vot.js" defer></script>
-    <title>Update Profile Voter</title>
+    <title>Update Voter Profile</title>
     <style>
         body{
                    
@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </legend>
         </b>
         
-        <form class="form" action="edit_voter.php" method="post" id="form">
+        <form class="form" action="voterviewprofile.php" method="post" id="form">
 
             <div class="inp-grp">
 

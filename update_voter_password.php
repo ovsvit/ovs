@@ -1,8 +1,6 @@
 <?php
 session_start();
 include("db.php");
-echo "<script type='text/javascript'>alert('Hello')</script>";
-
 
 if($_SERVER['REQUEST_METHOD']== 'POST')
 {
@@ -10,12 +8,6 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
     $a= $_POST['a'];//new password
     $o=$_POST['o'];
     $b=$_POST['b'];
-
-   /*$query = "UPDATE updpass SET Password=? WHERE Username=?";
-    $stmt = mysqli_prepare($conn, $query);
-    mysqli_stmt_bind_param($stmt, "ss", $u, $a);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);*/
 
  $query="UPDATE updpass SET Password='$a' where Username='$u'";
  mysqli_query($conn,$query);
@@ -129,9 +121,9 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             <h1> Online Voting System</h1>
             
             <ul >
-                <li ><a href="home.html">Home</a></li>
+                <li ><a href="voterhome.html">Home</a></li>
                 <li>|</li>
-                <li><a href="logout.html">Logout</a></li>
+                <li><a href="home1.html">Logout</a></li>
             </ul>    
         </nav>
         
@@ -145,7 +137,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             
         </b>
         
-        <form method="POST" class="form">
+        <form method="POST" action="voterhome.html" class="form">
             <div>
                 <label class="label">Username:</label>
                 <input class="inp" type="text" id="u" name="u" placeholder="Enter your username" >

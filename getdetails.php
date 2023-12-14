@@ -101,9 +101,9 @@ nav {
            <div class="option">
                <nav>
                    <ul>
-                       <li><h3><a href="submit1.html">Home</a></h3></li>
+                       <li><h3><a href="voterhome.html">Home</a></h3></li>
                        <li><h3>|</h3></li>
-                       <li>  <h3><a href="submit1.html">Logout</a></h3></li>
+                       <li>  <h3><a href="home1.html">Logout</a></h3></li>
                    </ul>
                </nav>
                
@@ -112,7 +112,7 @@ nav {
            </div>
 </div>
 <div class="data">
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="edit_voter.php" method="POST" enctype="multipart/form-data">
    <center><h3 id="title">My Profile<h3></center> 
    <hr>
     <?php 

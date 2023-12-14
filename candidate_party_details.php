@@ -223,7 +223,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
     <h4 id="personnal">
         Go to
-        <a href="candidatereg.html">Previous page</a >
+        <a href="candidate_Registration_ovs.php">Previous page</a >
         </h4>
         <br>
         <hr >

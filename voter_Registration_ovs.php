@@ -178,7 +178,7 @@ body
     
     <h2 id="topic">Welcome to Online Voting</h2>
     <div class="container">
-      <form action="success.php" method="POST" id="form" >
+      <form  method="POST" id="form" >
         <h2 >Create Your Account..</h2>
         
         <h4 id="home">

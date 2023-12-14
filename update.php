@@ -20,9 +20,6 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
  $query="UPDATE updpass SET Password='$a' where Username='$u'";
  mysqli_query($conn,$query);
 }
-else {
-    echo "<script type='text/javascript'>alert('Errorrr')</script>";
-}
 
 
 

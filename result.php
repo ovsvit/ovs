@@ -1,4 +1,17 @@
+<?php
+session_start();
+$con=mysqli_connect("localhost","root","","result");
 
+if($_SERVER['REQUEST_METHOD']=='POST')
+$dt=$_POST['dt'];
+$query="insert into result(date_time) values('$dt')";
+$result=mysqli_query($con,$query);
+if($result)
+{
+    echo "<script> alert('Date and time is seted successfully')</script>";
+}
+    header("Location:adminhome.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +106,7 @@ nav {
            <div class="option">
                <nav>
                    <ul>
-                       <li><h3><a href="result.php">Home</a></h3></li>
+                       <li><h3><a href="adminhome.php">Home</a></h3></li>
                        <li><h3>|</h3></li>
                        <li>  <h3><a href="home1.html">Logout</a></h3></li>
                    </ul>
@@ -103,7 +116,7 @@ nav {
    
            </div>
 </div>
-<form  action="ressuc.php" method="POST" >
+<form  method="POST" >
     <div class="box">
         <center>
             <h3>Result Release</h3>

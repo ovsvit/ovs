@@ -51,7 +51,7 @@ body
     margin-left:380px;
     margin-top:30px;
     width:500px;
-    height: 580px;
+    height: 630px;
     background-color: aqua;
     border:2px solid darkblue;
     padding:10px;
@@ -90,6 +90,17 @@ nav {
     margin-top:10px;
     margin-left:40px;
     
+  }
+  .btn
+  {
+    float:left;
+    margin-left:30px;
+    width:20%;
+    padding:8px;
+    height:30px;
+    background-color: darkblue;
+    border:2px solid darkblue;
+    color:white
   }
 
     </style>
@@ -162,7 +173,7 @@ nav {
                ?>
 
                
-            
+            <button class="btn">Edit</button>
         </form>
         </div>
         

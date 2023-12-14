@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Release Result</title>
+    <title>View profile</title>
 
     <style>
 
@@ -84,6 +84,13 @@ nav {
     margin-top:50px;
     margin-left:120px;
 }
+#vid
+{
+    margin-top:10px;
+    margin-left:50px;
+    padding:5px;
+    width:75%;
+}
     </style>
 </head>
 <body>
@@ -103,18 +110,18 @@ nav {
    
            </div>
 </div>
-<form  action="ressuc.php" method="POST" >
+<form  action="getdetails.php" method="POST" >
     <div class="box">
         <center>
-            <h3>Result Release</h3>
+            <h3>My profile</h3>
         </center>
         <hr id="#line">
         <br><br>
-        <label id="h1" for="datetime">Date & Time: </label>
-        
-        <input type="datetime-local" name="dt" id="dt">
+        <label id="h1" for="text">VoterID_number: </label>
+        <br>
+        <input type="text" name="vid" id="vid" placeholder ="Enter your voterID number">
 <br>
-        <button type="submit" class="btn">Set</button>
+        <button type="submit" class="btn">Submit</button>
         
     </div>
 

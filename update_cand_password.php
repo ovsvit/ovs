@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
     $o=$_POST['o'];
     $b=$_POST['b'];
 
- $query="UPDATE updpass SET Password='$a' where Username='$u'";
+ $query="UPDATE candidate_login SET password='$a' where username='$u'";
  mysqli_query($conn,$query);
 }
 
@@ -207,7 +207,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
         let message=document.getElementById("message");
     if(oldPass!=newPass)
     {
-        if(newPass.length>=3)
+        if(newPass.length>=3 )
         {
             if(newPass==confPass)
             {

@@ -1,4 +1,6 @@
 <?php
-$con=mysqli_connect("localhost","root","","login");
-
+$conn=mysqli_connect("localhost","root","","updatetest") ;
+if(!$conn){
+    die("Connection Error");
+}
 ?>

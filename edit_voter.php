@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-include("db_edit.php");
+include("db.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fieldname = $_POST['field'];
@@ -11,13 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newval = $_POST['new'];
     $proof = $_POST['proof'];
 
-    $query1 = "INSERT INTO editreq_voter (Field_Name, Voter_ID, Existing_Value, New_Value, Proof) 
-              VALUES ('$fieldname', '$voter_id', '$existingval', '$newval', '$proof')";
+ 
 
-    $updateQuery = "UPDATE register_voter SET $fieldname = '$newval' WHERE Voter_ID = '$voter_id' AND $fieldname = '$existingval'";
-
-    // Execute the queries
-    $result1 = mysqli_query($conn, $query1);
+    $updateQuery = "UPDATE voter_register SET $fieldname = '$newval' WHERE VoterID_number = '$voter_id' AND $fieldname = '$existingval'";
     $result2 = mysqli_query($conn, $updateQuery);
 
     if (!$result1 && !$result2) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("partydb.php");
+include("db.php");
 if($_SERVER['REQUEST_METHOD']== 'POST')
 {
  $pname=$_POST['pname'];
@@ -15,9 +15,9 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
  
 
 
-  $query="insert into partydetails(Partyname,Symbol,Signature,Principles,Vote_count	)
+  $query="insert into party_register(Partyname,Symbol,Signature,Principles,Vote_count	)
   values('$pname','$symbol_name','$sig_name','$principle',0)";
-  mysqli_query($con,$query);
+  mysqli_query($conn,$query);
   header("Location: success.php");
 }
 ?>

@@ -1,7 +1,9 @@
 <?php
 $con=mysqli_connect("localhost","root","","ovs") or die(mysqli_error($con));
-$query="select party_name,party_description,party_symbol,Candidate_ID,candidate_pic from register_candidate";
-$result=mysqli_query($con,$query);
+$query1="select Partyname,Principles,Symbol from party_register";
+$query2="select Candidateid_number,Photo from candidate_register";
+$result1=mysqli_query($con,$query1);
+$result2=mysqli_query($con,$query2);
 ?>
 
 <!DOCTYPE html>
@@ -108,17 +110,17 @@ td{
                                 {
                                 ?>
                             
-                                <td><?php echo $row['party_name'] ?></td>
-                                <td><?php echo $row['party_description'] ?></td>
+                                <td><?php echo $row['Partyname'] ?></td>
+                                <td><?php echo $row['Principles'] ?></td>
                                 
                                 <td><img src="data:image/jpeg;base64,
-                                <?php echo base64_encode($row['party_symbol']); ?>"
+                                <?php echo base64_encode($row['Symbol']); ?>"
                                alt="Candidate Pic" width="100" height="100"></td>
                                
-                                <td><?php echo $row['Candidate_ID'] ?></td>
+                                <td><?php echo $row['Candidateid_number'] ?></td>
                                 
                                  <td><img src="data:image/jpeg;base64,
-                                <?php echo base64_encode($row['candidate_pic']); ?>"
+                                <?php echo base64_encode($row['Photo']); ?>"
                                alt="Candidate Pic" width="100" height="100"></td>
            
 

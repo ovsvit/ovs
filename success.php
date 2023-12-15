@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   $voterid= $_POST['voterid'];
   $pw= $_POST['password1'];
 
-  $query="insert into passwordcreation(Username,Password)  values('$voterid','$pw')";
+  $query="insert into voter_login(username,password)  values('$voterid','$pw')";
   $query_run=mysqli_query($con,$query);
   if($query_run)
   {

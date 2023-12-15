@@ -216,7 +216,7 @@ chart.render();
                                 </tr>
                                 <tr>
                                     <?php
-                                        while($row=mysqli_fetch_assoc($ovs))
+                                        while($row=mysqli_fetch_assoc($result))
                                         {
                                             ?>
                                               <td><?php echo $row['Candidateid_number']; ?></td>

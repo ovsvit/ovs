@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
     $o=$_POST['o'];
     $b=$_POST['b'];
 
- $query="UPDATE updpass SET Password='$a' where Username='$u'";
+ $query="UPDATE voter_login SET password='$a' where username='$u'";
  mysqli_query($conn,$query);
 }
 

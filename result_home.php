@@ -1,14 +1,16 @@
 <?php
-require_once('resdb.php');
-$query="Select * from candidate  order by Vote_count desc";
-$result=mysqli_query($con,$query);
-$query2="Select * from candidate";
-$res= mysqli_query($con,$query2);
+require_once('db.php');
+//$query="Select * from candidate  order by Vote_count desc";
+$query="SELECT * FROM candidate_register INNER JOIN party_register ON candidate_register.Serial_num = party_register.Serial_num order by candidate_register.Vote_count desc;";
+$result=mysqli_query($conn,$query);
+$query2="Select * from party_register";
+//$query2="Select * from candidate_register INNER JOIN party_register ON candidate_register.Serial_num = party_register.Serial_num;
+$res= mysqli_query($conn,$query2);
 $test=array();
 
 $count=0;
 while($row=mysqli_fetch_array($res)){
-    $test[$count]["label"]=$row["Party_name"];
+    $test[$count]["label"]=$row["Partyname"];
     $test[$count]["y"]=$row["Vote_count"];
     $count=$count+1;
 }
@@ -206,21 +208,23 @@ chart.render();
                                 <tr><h2>
                                     <th>Candidate ID</th>
                                     <th>Candidate Name</th>
+			            <th>Candidate photo</th>
                                     <th>Party Name</th>
                                     <th>Party Symbol</th>
-                                    <th>Description</th>
+                                    <th>Principles</th>
                                     <th>Vote count</th></h2>
                                 </tr>
                                 <tr>
                                     <?php
-                                        while($row=mysqli_fetch_assoc($result))
+                                        while($row=mysqli_fetch_assoc($ovs))
                                         {
                                             ?>
-                                              <td><?php echo $row['Cand_id']; ?></td>
-                                              <td><?php echo $row['Cand_name']; ?></td>
-                                              <td><?php echo $row['Party_name']; ?></td>
-                                              <td><?php echo $row['Party_Symbol']; ?></td>
-                                              <td><?php echo $row['Description']; ?></td>
+                                              <td><?php echo $row['Candidateid_number']; ?></td>
+                                              <td><?php echo $row['Firstname']; ?></td>
+                                              <td><?php echo $row['Photo']; ?></td>
+					      <td><?php echo $row['Partyname']; ?></td>
+                                              <td><?php echo $row['Symbol']; ?></td>
+                                              <td><?php echo $row['Principles']; ?></td>
                                               <td><?php echo $row['Vote_count']; ?></td>
                                               </tr>     
  

@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   $query="insert into party_register(Partyname,Symbol,Signature,Principles,Vote_count	)
   values('$pname','$symbol_name','$sig_name','$principle',0)";
   mysqli_query($conn,$query);
-  header("Location: success.php");
+  header("Location: candidate_pwcreation.php");
 }
 ?>
 
@@ -213,7 +213,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
   
     </style>
-    <script defer src="./party.js"></script>
+    
 </head>
 
 <body>

@@ -17,11 +17,11 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
    $city= $_POST['city'];
   $pincode= $_POST['pincode'];
   $nationality=$_POST['nationality'];
-  $img_name=$_FILES['photo']['name'];
+  $img_name=$_POST['photo'];
    //echo "  $img_name";
-   $img_tmp_name=$_FILES['photo']['tmp_name'];
+   
    //echo " $img_tmp_name";
-   move_uploaded_file($img_tmp_name,"uploads/ $img_name");
+
 
 
   $query="insert into candidate_register(Firstname,Lastname,Candidateid_number,Aadhar_number,DOB,Age,Gender,Phone_number,Email,Door_number,Street,City,Pincode,Nationality,Photo) 

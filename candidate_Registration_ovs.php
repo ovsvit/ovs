@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
    move_uploaded_file($img_tmp_name,"uploads/ $img_name");
 
 
-  $query="insert into candidate_register(Firstname,Lastname,Candidateid_number,Aadhar_number,DOB,Age,Gender,Phone_number,Email,Door_number,Street,City,Pincode,Nationality,Photo) 
+  $query="insert into candidate_login(Firstname,Lastname,Candidateid_number,Aadhar_number,DOB,Age,Gender,Phone_number,Email,Door_number,Street,City,Pincode,Nationality,Photo) 
  values('$firstname','$lastname','$candid','$Aadharnumber','$DOB','$Age','$gender','$phno','$email','$dno','$street','$city','$pincode','$nationality','$img_name')";
   mysqli_query($conn,$query);
 
@@ -223,7 +223,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
   
    </style>
-    <script defer src="./candidatereg.js"></script>
+    
   </head>
   <body>
     <h2 id="topic">Welcome to Online Voting..</h2>

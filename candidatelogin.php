@@ -33,7 +33,7 @@ h1{
 {
     margin-left:400px;
     margin-top:100px;
-    height:420px;
+    height:460px;
     width:300px;
     padding:50px;
     border-radius:30px;
@@ -120,6 +120,10 @@ nav {
     </div>
          <div class="option">
         <nav>
+             <ul>
+            
+            <li><h3> Not Registered yet?  <a href="candidate_Registration_ovs.php">Register here!</h3></li>
+        </ul>
             <ul>
                 <li><h3><a href="home1.html">Home</a></h3></li>
                 <li><h3>|</h3></li>

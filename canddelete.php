@@ -4,7 +4,7 @@ if(isset($_GET['id']))
 {
 $id=$_GET['id'];
 }
-$query1="delete from candidate_login where Serial_num='$id'";
+$query1="delete from candidate_register where Serial_num='$id'";
 $query2="delete from party_register where Serial_num='$id'";
 
 $result1=mysqli_query($conn,$query1);

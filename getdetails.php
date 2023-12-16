@@ -1,13 +1,13 @@
 <?php
-$con=mysqli_connect("localhost","root","","voterregistration");
+
 if(isset($_POST['vid']))
 {
     $vid=$_POST['vid'];
     
 }
 
-$query="select * from voterregister where VoterID_number ='$vid'";
-$result=mysqli_query($con,$query);
+$query="select * from voter_register where VoterID_number ='$vid'";
+$result=mysqli_query($conn,$query);
 //$row = mysqli_fetch_array($result);
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ $result=mysqli_query($con,$query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Profile</title>
     <style>
 
 body

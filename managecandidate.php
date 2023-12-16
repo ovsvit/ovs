@@ -11,7 +11,7 @@ $result2=mysqli_query($conn,$query2);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+   <title>Manage Candidate/title>
     <link rel="stylesheet" href="voterinfo.css">
     <style>
 body

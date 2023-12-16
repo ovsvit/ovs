@@ -1,7 +1,7 @@
 <?php
 require_once('db.php');
 //$query="Select * from candidate  order by Vote_count desc";
-$query="SELECT * FROM candidate_register INNER JOIN party_register ON candidate_register.Serial_num = party_register.Serial_num order by candidate_register.Vote_count desc;";
+$query="SELECT * FROM candidate_register INNER JOIN party_register ON candidate_register.Serial_num = party_register.Serial_num order by party_register.Vote_count desc;";
 $result=mysqli_query($conn,$query);
 $query2="Select * from party_register";
 //$query2="Select * from candidate_register INNER JOIN party_register ON candidate_register.Serial_num = party_register.Serial_num;

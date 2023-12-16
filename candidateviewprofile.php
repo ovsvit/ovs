@@ -115,7 +115,7 @@ nav {
         <center>
             <h3>My profile</h3>
         </center>
-        <hr id="#line">
+        <hr id="line">
         <br><br>
         <label id="h1" for="text">CandidateID_number: </label>
         <br>

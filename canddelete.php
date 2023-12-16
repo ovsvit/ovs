@@ -1,19 +1,18 @@
 <?php
-$con1=mysqli_connect("localhost","root","","candidate_reg");
-$con2=mysqli_connect("localhost","root","","party_details");
+$conn1=mysqli_connect("localhost","root","","ovs");
 if(isset($_GET['id']))
 {
 $id=$_GET['id'];
 }
-$query1="delete from candidateregister where Serial_num='$id'";
-$query2="delete from partydetails where Serial_num='$id'";
+$query1="delete from candidate_login where Serial_num='$id'";
+$query2="delete from party_register where Serial_num='$id'";
 
-$result1=mysqli_query($con1,$query1);
-$result2=mysqli_query($con2,$query2);
+$result1=mysqli_query($conn,$query1);
+$result2=mysqli_query($conn1,$query2);
 
 if($result1 && $result2)
 {
-  header("Location:candmyprofile.php");
+  header("Location:managecandidate.php");
 }
 ?>
 

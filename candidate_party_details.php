@@ -5,8 +5,8 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 {
  $pname=$_POST['pname'];
  
- $sig_name=$_FILES['sig'];
-
+ $sig_name=$_POST['sig'];
+$symbol_name=$_POST['symbol'];
 
  $principle=$_POST['principle'];
  

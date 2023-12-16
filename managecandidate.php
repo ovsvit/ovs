@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("db.php");
-$query1="select * from candidate_login";
+$query1="select * from candidate_register";
 $result1=mysqli_query($conn,$query1);
 $query2="select * from party_register";
 $result2=mysqli_query($conn,$query2);
@@ -11,7 +11,7 @@ $result2=mysqli_query($conn,$query2);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Manage Candidate/title>
+    <title>Manage Candidate</title>
     <link rel="stylesheet" href="voterinfo.css">
     <style>
 body

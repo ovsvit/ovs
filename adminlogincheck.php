@@ -27,7 +27,7 @@ else if(empty($pass))
 else{
 $sql="select * from admin_login where username='$user' and password='$pass'";
 
-$result=mysqli_query($con,$sql);
+$result=mysqli_query($conn,$sql);
 
 if(mysqli_num_rows($result) === 1)
 {

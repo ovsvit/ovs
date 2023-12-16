@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   if($query_run)
   {
    
-    header("Location: voterhome.html");
+    header("Location: voterlogin.php");
   }
   
  

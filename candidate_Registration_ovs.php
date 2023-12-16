@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
  values('$firstname','$lastname','$candid','$Aadharnumber','$DOB','$Age','$gender','$phno','$email','$dno','$street','$city','$pincode','$nationality','$img_name')";
   mysqli_query($conn,$query);
 
-  header("Location:party_register.php");
+  header("Location:candidate_party_details.php");
  
 }
 ?>

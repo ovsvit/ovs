@@ -5,27 +5,33 @@ session_start();
 include("db.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $fieldname = $_POST['field'];
-    $voter_id = $_POST['voter_id'];
-    $existingval = $_POST['old'];
-    $newval = $_POST['new'];
-    $proof = $_POST['proof'];
+    $fieldname = isset($_POST['field']) ? $_POST['field'] : '';
+    $voter_id = isset($_POST['voter_id']) ? $_POST['voter_id'] : '';
+    $existingval = isset($_POST['old']) ? $_POST['old'] : '';
+    $newval = isset($_POST['new']) ? $_POST['new'] : '';
+    $proof = isset($_POST['proof']) ? $_POST['proof'] : '';
 
- 
+    // Debugging: Output values to the console
+    error_log("fieldname: $fieldname, voter_id: $voter_id, existingval: $existingval, newval: $newval, proof: $proof");
 
-    $updateQuery = "UPDATE voter_register SET $fieldname = '$newval' WHERE VoterID_number = '$voter_id' AND $fieldname = '$existingval'";
-    $result2 = mysqli_query($conn, $updateQuery);
+    // Check if the field name is not empty
+    if (!empty($fieldname)) {
+        // Use backticks around the dynamic column name
+        $updateQuery = "UPDATE voter_register SET `$fieldname` = '$newval' WHERE VoterID_number = '$voter_id' AND `$fieldname` = '$existingval'";
+        
+        // Debugging: Output SQL query to the console
+        error_log("SQL Query: $updateQuery");
 
-    if (!$result1 && !$result2) {
-        die('MySQL Error: ' . mysqli_error($conn));
-    } else if (!$result1) {
-        die('MySQL Error: ' . mysqli_error($conn));
-        echo "<script type='text/javascript'>alert('ERROR : CAN'T UPDATE...')</script>";
-    } else if (!$result2) {
-        die('MySQL Error: ' . mysqli_error($conn));
-        echo "<script type='text/javascript'>alert('ERROR : CAN'T UPDATE THE DATA IN THE DATABASE...')</script>";
+        $result2 = mysqli_query($conn, $updateQuery);
+
+        if (!$result2) {
+            die('MySQL Error: ' . mysqli_error($conn));
+            echo "<script type='text/javascript'>alert('ERROR: CAN\'T UPDATE THE DATA IN THE DATABASE...')</script>";
+        } else {
+            echo "<script type='text/javascript'>alert('SUCCESSFULLY UPDATED :)')</script>";
+        }
     } else {
-        echo "<script type='text/javascript'>alert('SUCCESSFULLY  UPDATED :)')</script>";
+        echo "<script type='text/javascript'>alert('ERROR: Field name is empty.')</script>";
     }
 }
 ?>

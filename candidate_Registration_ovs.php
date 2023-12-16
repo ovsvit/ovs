@@ -17,18 +17,18 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
    $city= $_POST['city'];
   $pincode= $_POST['pincode'];
   $nationality=$_POST['nationality'];
-  $img_name=$_POST['photo'];
+  $img_name=$_FILES['photo']['name'];
    //echo "  $img_name";
-   
+   $img_tmp_name=$_FILES['photo']['tmp_name'];
    //echo " $img_tmp_name";
-
+   move_uploaded_file($img_tmp_name,"uploads/ $img_name");
 
 
   $query="insert into candidate_register(Firstname,Lastname,Candidateid_number,Aadhar_number,DOB,Age,Gender,Phone_number,Email,Door_number,Street,City,Pincode,Nationality,Photo) 
  values('$firstname','$lastname','$candid','$Aadharnumber','$DOB','$Age','$gender','$phno','$email','$dno','$street','$city','$pincode','$nationality','$img_name')";
   mysqli_query($conn,$query);
 
-  header("Location:candidate_party_details.php");
+  header("Location:party_register.php");
  
 }
 ?>
@@ -228,7 +228,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   <body>
     <h2 id="topic">Welcome to Online Voting..</h2>
     <div class="container">
-      <form  method="POST" id="formc"  enctype="multipart/form-data">
+      <form  method="POST" id="formc" action="candidate_party_details.php"  enctype="multipart/form-data">
         <h2 id="acc">Create Your Account..</h2>
         
         <h4 id="home">

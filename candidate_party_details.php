@@ -4,12 +4,9 @@ include("db.php");
 if($_SERVER['REQUEST_METHOD']== 'POST')
 {
  $pname=$_POST['pname'];
- $symbol_name=$_FILES['symbol']['name'];
- $symbol_tmp_name=$_FILES['symbol']['tmp_name'];
- move_uploaded_file($symbol_tmp_name,"uploads/ $symbol_name");
- $sig_name=$_FILES['sig']['name'];
- $sig_tmp_name=$_FILES['sig']['tmp_name'];
- move_uploaded_file($sig_tmp_name,"uploads/ $sig_name");
+ 
+ $sig_name=$_FILES['sig'];
+
 
  $principle=$_POST['principle'];
  

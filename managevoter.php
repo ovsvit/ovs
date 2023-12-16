@@ -1,8 +1,9 @@
 <?php
-$con=mysqli_connect("localhost","root","");
-$db=mysqli_select_db($con,"voterregistration");
-$query="select * from voterregister";
-$query_run = mysqli_query($con,$query);
+session_start();
+include("db.php");
+
+$query="select * from voter_register";
+$query_run = mysqli_query($conn,$query);
 
 
 ?>
@@ -11,7 +12,7 @@ $query_run = mysqli_query($con,$query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My profile</title>
+    <title>Manage Voter</title>
     <style>
 
 body
@@ -123,7 +124,7 @@ nav {
            <div class="option">
                <nav>
                    <ul>
-                       <li><h3><a href="voterhome.html">Home</a></h3></li>
+                       <li><h3><a href="adminhome.php">Home</a></h3></li>
                        <li><h3>|</h3></li>
                        <li>  <h3><a href="home1.html">Logout</a></h3></li>
                    </ul>

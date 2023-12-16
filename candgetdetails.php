@@ -1,22 +1,22 @@
 <?php
-$con=mysqli_connect("localhost","root","","candidate_reg");
-$con1=mysqli_connect("localhost","root","","party_details");
+
+
 if(isset($_POST['cid']))
 {
     $cid=$_POST['cid'];
     
 }
 
-$query="select * from candidateregister where candidateid_number ='$cid'";
+$query="select * from candidate_login where candidateid_number ='$cid'";
 
-$result=mysqli_query($con,$query);
-$query1="select Serial_num from candidateregister where  candidateid_number ='$cid'";
-$result1=mysqli_query($con,$query1);
+$result=mysqli_query($conn,$query);
+$query1="select Serial_num from candidate_login where  candidateid_number ='$cid'";
+$result1=mysqli_query($conn,$query1);
 
 $row1 = mysqli_fetch_assoc($result1);
 $sno=$row1["Serial_num"];
-$query2="select * from partydetails where Serial_num='$sno'";
-$result2=mysqli_query($con1,$query2);
+$query2="select * from party_register where Serial_num='$sno'";
+$result2=mysqli_query($conn,$query2);
 
 //echo "<script>console.log($sno)</script>";
 ?>
@@ -25,7 +25,7 @@ $result2=mysqli_query($con1,$query2);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My profile</title>
     <style>
 
 body

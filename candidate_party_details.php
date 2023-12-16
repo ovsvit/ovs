@@ -12,7 +12,7 @@ $symbol_name=$_POST['symbol'];
  
 
 
-  $query="insert into party_register(Partyname,Symbol,Signature,Principles,Vote_count	)
+  $query="insert into party_register(Partyname,Symbol,Signature,Principles,Vote_count)
   values('$pname','$symbol_name','$sig_name','$principle',0)";
   mysqli_query($conn,$query);
   header("Location: candidate_pwcreation.php");

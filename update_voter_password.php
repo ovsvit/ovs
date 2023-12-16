@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);*/
 
- $query="UPDATE updpass SET Password='$a' where Username='$u'";
+ $query="UPDATE voter_login SET password='$a' where username='$u'";
  mysqli_query($conn,$query);
 }
 

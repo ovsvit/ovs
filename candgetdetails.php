@@ -7,10 +7,10 @@ if(isset($_POST['cid']))
     
 }
 
-$query="select * from candidate_login where candidateid_number ='$cid'";
+$query="select * from candidate_register where candidateid_number ='$cid'";
 
 $result=mysqli_query($conn,$query);
-$query1="select Serial_num from candidate_login where  candidateid_number ='$cid'";
+$query1="select Serial_num from candidate_register where  candidateid_number ='$cid'";
 $result1=mysqli_query($conn,$query1);
 
 $row1 = mysqli_fetch_assoc($result1);

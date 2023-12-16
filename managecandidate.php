@@ -1,9 +1,9 @@
 <?php
-require_once("config1.php");
-require_once("config2.php");
-$query1="select * from candidateregister";
-$result1=mysqli_query($con,$query1);
-$query2="select * from partydetails";
+session_start();
+include("db.php");
+$query1="select * from candidate_login";
+$result1=mysqli_query($conn,$query1);
+$query2="select * from party_register";
 $result2=mysqli_query($conn,$query2);
 ?>
 <!DOCTYPE html>
@@ -11,6 +11,7 @@ $result2=mysqli_query($conn,$query2);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
     <link rel="stylesheet" href="voterinfo.css">
     <style>
 body
@@ -130,7 +131,7 @@ nav {
            <div class="option">
                <nav>
                    <ul>
-                       <li><h3><a href="voterhome.html">Home</a></h3></li>
+                       <li><h3><a href="adminhome.php">Home</a></h3></li>
                        <li><h3>|</h3></li>
                        <li>  <h3><a href="home1.html">Logout</a></h3></li>
                    </ul>

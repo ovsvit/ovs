@@ -22,9 +22,9 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
   $query="insert into voter_register(Firstname,Lastname,Voterid_number,Aadhar_number,DOB,Age,Gender,Phone_number,Email,Door_number,Street,City,Pincode,Nationality,Photo,Status) 
  values('$firstname','$lastname','$voterid','$Aadharnumber','$DOB','$Age','$gender','$phno','$email','$dno','$street','$city','$pincode','$nationality','$photo',0)";
-  mysqli_query($con,$query);
+  mysqli_query($conn,$query);
 
-  header("Location:success.php");
+  header("Location:voter_pwcreation.php");
  
 }
 ?>

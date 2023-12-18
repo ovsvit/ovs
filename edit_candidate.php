@@ -165,10 +165,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <option selected hidden value="" >select field name</option>
                     <option>Firstname</option>
                     <option>Lastname</option>
-                    <option>Candidate_ID</option>
-                    <option>Party_Name</option>
-                    <option>Party_Symbol</option>
-                    <option>Party_Description</option>
+                    <option>Candidateid_number</option>
+                  
                     <option>Aadhar_number</option>
                     <option>DOB</option>
                     <option>Age</option>

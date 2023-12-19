@@ -129,9 +129,9 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             <h1> Online Voting System</h1>
             
             <ul >
-                <li ><a href="home.html">Home</a></li>
+                <li ><a href="candidatehomepage.html">Home</a></li>
                 <li>|</li>
-                <li><a href="logout.html">Logout</a></li>
+                <li><a href="home1.html">Logout</a></li>
             </ul>    
         </nav>
         
@@ -145,7 +145,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             
         </b>
         
-        <form method="POST" class="form">
+        <form method="POST" action="candidatehomepage.html" class="form">
             <div>
                 <label class="label">Username:</label>
                 <input class="inp" type="text" id="u" name="u" placeholder="Enter your username" >

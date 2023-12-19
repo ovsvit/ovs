@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("db.php");
-echo "<script type='text/javascript'>alert('Hello')</script>";
+//echo "<script type='text/javascript'>alert('Hello')</script>";
 
 
 if($_SERVER['REQUEST_METHOD']== 'POST')

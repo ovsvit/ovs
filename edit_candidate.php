@@ -17,18 +17,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $updateQuery = "UPDATE candidate_register SET $fieldname = '$newval' WHERE Candidateid_number = '$candidate_id' AND $fieldname = '$existingval'";
     $result2 = mysqli_query($conn, $updateQuery);
 
-    if (!$result1 && !$result2) {
-        die('MySQL Error: ' . mysqli_error($conn));
-    } else if (!$result1) {
-        die('MySQL Error: ' . mysqli_error($conn));
-        echo "<script type='text/javascript'>alert('ERROR : CAN'T REQUEST TO EDIT...')</script>";
-    } else if (!$result2) {
+   
+    if (!$result2) {
         die('MySQL Error: ' . mysqli_error($conn));
         echo "<script type='text/javascript'>alert('ERROR : CAN'T UPDATE THE DATA IN THE DATABASE...')</script>";
     } else {
         echo "<script type='text/javascript'>alert('SUCCESSFULLY REQUESTED AND UPDATED :)')</script>";
+        header("Location: candidateviewprofile.php");
+exit;
+
     }
-} else 
+} 
 ?>
 
 <!DOCTYPE html>
@@ -155,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </legend>
         </b>
         
-        <form class="form" action="candidateviewprofile.php" method="post" id="form">
+        <form class="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="form">
 
             <div class="inp-grp">
 
@@ -165,8 +164,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <option selected hidden value="" >select field name</option>
                     <option>Firstname</option>
                     <option>Lastname</option>
-                    <option>Candidateid_number</option>
-                  
+                    <option>Candidate_ID</option>
+                    <option>Party_Name</option>
+                    <option>Party_Symbol</option>
+                    <option>Party_Description</option>
                     <option>Aadhar_number</option>
                     <option>DOB</option>
                     <option>Age</option>

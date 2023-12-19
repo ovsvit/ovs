@@ -20,8 +20,8 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
   $query="insert into partydetails(Partyname,Symbol,Signature,Principles,Vote_count	)
   values('$pname','$symbol_name','$sig_name','$principle',0)";
-  mysqli_query($con,$query);
-  header("Location: success.php");
+  mysqli_query($conn,$query);
+  header("Location: candidate_pwcreation.php");
 }
 ?>
 

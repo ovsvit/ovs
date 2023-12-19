@@ -38,10 +38,10 @@ $result=mysqli_query($conn,$sql);
 if(mysqli_num_rows($result) === 1)
 {
    $row=mysqli_fetch_assoc($result);
-   if($row['Name']=== $user && $row['Aadhar_number']=== $aadhar && $row['Nationality']===$nation)
+   if($row['Nationality']==="Indian" || "indian" || "INDIAN")
    {
    
-   header("Location: result_home.php ");
+   header("Location: time.php ");
    }
 
 }

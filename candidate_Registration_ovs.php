@@ -248,7 +248,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
         <hr>
         
         <div class="info">
-            <h4 id="p">Personal details</h4>
+            <h4 id="p">Personal Details</h4>
         </div>
         
 

@@ -4,18 +4,24 @@ include("db.php");
 if($_SERVER['REQUEST_METHOD']== 'POST')
 {
  $pname=$_POST['pname'];
- 
+ $symbol_name=$_POST['symbol'];
  $sig_name=$_POST['sig'];
-$symbol_name=$_POST['symbol'];
+ $principle=$_POST['principle'];
+// $symbol_name=$_FILES['symbol']['name'];
+ //$symbol_tmp_name=$_FILES['symbol']['tmp_name'];
+ //move_uploaded_file($symbol_tmp_name,"uploads/ $symbol_name");
+// $sig_name=$_FILES['sig']['name'];
+// $sig_tmp_name=$_FILES['sig']['tmp_name'];
+ //move_uploaded_file($sig_tmp_name,"uploads/ $sig_name");
 
  $principle=$_POST['principle'];
  
 
 
-  $query="insert into party_register(Partyname,Symbol,Signature,Principles,Vote_count)
+  $query="insert into partydetails(Partyname,Symbol,Signature,Principles,Vote_count	)
   values('$pname','$symbol_name','$sig_name','$principle',0)";
-  mysqli_query($conn,$query);
-  header("Location: candidate_pwcreation.php");
+  mysqli_query($con,$query);
+  header("Location: success.php");
 }
 ?>
 
@@ -210,7 +216,7 @@ $symbol_name=$_POST['symbol'];
 
   
     </style>
-    
+    <script defer src="./party.js"></script>
 </head>
 
 <body>
@@ -220,7 +226,7 @@ $symbol_name=$_POST['symbol'];
 
     <h4 id="personnal">
         Go to
-        <a href="candidate_Registration_ovs.php">Previous page</a >
+        <a href="candidatereg.html">Previous page</a >
         </h4>
         <br>
         <hr >

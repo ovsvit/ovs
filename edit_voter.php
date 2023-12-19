@@ -1,26 +1,18 @@
-
-
 <?php
 session_start();
 include("db.php");
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fieldname = isset($_POST['field']) ? $_POST['field'] : '';
     $voter_id = isset($_POST['voter_id']) ? $_POST['voter_id'] : '';
     $existingval = isset($_POST['old']) ? $_POST['old'] : '';
     $newval = isset($_POST['new']) ? $_POST['new'] : '';
     $proof = isset($_POST['proof']) ? $_POST['proof'] : '';
 
-    // Debugging: Output values to the console
-    error_log("fieldname: $fieldname, voter_id: $voter_id, existingval: $existingval, newval: $newval, proof: $proof");
-
     // Check if the field name is not empty
     if (!empty($fieldname)) {
         // Use backticks around the dynamic column name
-        $updateQuery = "UPDATE voter_register SET `$fieldname` = '$newval' WHERE VoterID_number = '$voter_id' AND `$fieldname` = '$existingval'";
-        
-        // Debugging: Output SQL query to the console
-        error_log("SQL Query: $updateQuery");
+        $updateQuery = "UPDATE voter_register SET `$fieldname` = '$newval' WHERE VoterID_number = '$voter_id' AND `$fieldname` = '$existingval';";
 
         $result2 = mysqli_query($conn, $updateQuery);
 
@@ -29,15 +21,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "<script type='text/javascript'>alert('ERROR: CAN\'T UPDATE THE DATA IN THE DATABASE...')</script>";
         } else {
             echo "<script type='text/javascript'>alert('SUCCESSFULLY UPDATED :)')</script>";
+            header("Location: voterviewprofile.php");
+exit;
+
         }
-    } else {
-        echo "<script type='text/javascript'>alert('ERROR: Field name is empty.')</script>";
+    } else{
+        echo "<script type='text/javascript'>alert('FIELDNAME EMPTY:)')</script>";
     }
 }
 ?>
-
-
-
 
 
 
@@ -165,13 +157,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </legend>
         </b>
         
-        <form class="form" action="voterviewprofile.php" method="post" id="form">
+        <form class="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="form">
+
 
             <div class="inp-grp">
 
 
             <label class="label" for="field">Field name</label>
-          <select id="field" class="inp" name="field" title="Select field name">
+<select id="field" class="inp" name="field" title="Select field name">
+
             <option selected hidden value="" >select field name</option>
                     <option>Firstname</option>
                     <option>Lastname</option>
@@ -194,25 +188,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div >
 
             <div class="inp-grp">
-                <label class="label" for="voter_id">Voter ID</label>
-                <input id="voter_id" class="inp" type="text"  name="voter_id" placeholder="Enter Voter_ID value">
+            <label class="label" for="voter_id">Voter ID</label>
+<input id="voter_id" class="inp" type="text" name="voter_id" placeholder="Enter Voter_ID value">
+
                 <div class="error"></div>
             </div>
 
             <div class="inp-grp">
-                <label class="label"  for="old">Existing value</label>
-                <input id="old" class="inp" type="text"  name="old" placeholder="Enter existing value">
+            <label class="label" for="old">Existing value</label>
+<input id="old" class="inp" type="text" name="old" placeholder="Enter existing value">
+
                 <div class="error"></div>
             </div>
             <div class="inp-grp">
-                <label class="label"  for="new" >New value</label>
-                <input id="new" class="inp" type="text" name="new" placeholder="Enter new value">
+            <label class="label" for="new">New value</label>
+<input id="new" class="inp" type="text" name="new" placeholder="Enter new value">
+
                 <div class="error"></div>
                 
             </div>
             <div class="inp-grp">
-                <label class="label" for="proof">Upload proof</label>
-                <input id="proof" class="inp" type="file" name="proof" >
+            <label class="label" for="proof">Upload proof</label>
+<input id="proof" class="inp" type="file" name="proof">
+
                 <div class="error"></div>
             </div>
              

@@ -18,7 +18,10 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   $pincode= $_POST['pincode'];
   $nationality=$_POST['nationality'];
   $img_name=$_POST['photo'];
- 
+   //echo "  $img_name";
+   //$img_tmp_name=$_FILES['photo']['tmp_name'];
+   //echo " $img_tmp_name";
+   //move_uploaded_file($img_tmp_name,"uploads/ $img_name");
 
 
   $query="insert into candidate_register(Firstname,Lastname,Candidateid_number,Aadhar_number,DOB,Age,Gender,Phone_number,Email,Door_number,Street,City,Pincode,Nationality,Photo) 
@@ -220,18 +223,18 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
   
    </style>
-    
+    <script defer src="./candidatereg.js"></script>
   </head>
   <body>
     <h2 id="topic">Welcome to Online Voting..</h2>
     <div class="container">
-      <form  method="POST" id="formc" action="candidate_party_details.php"  enctype="multipart/form-data">
+      <form  method="POST" id="formc" form="formc"  enctype="multipart/form-data">
         <h2 id="acc">Create Your Account..</h2>
         
         <h4 id="home">
           Go to
           <a
-            href="home1.html"
+            href="#"
             
             >Home</a
           >
@@ -239,7 +242,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
         <h4 id="login">
           Already have an account?
           <a
-            href="candidatelogin.php"
+            href="#"
             
             >Login</a
           >

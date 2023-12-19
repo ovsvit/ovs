@@ -1,23 +1,20 @@
 <?php
+include("db.php"); // Include your database connection file
 
-session_start();
-include("db.php");
-if(isset($_POST['cid']))
-{
-    $cid=$_POST['cid'];
-    
+if (isset($_POST['cid'])) {
+    $cid = $_POST['cid'];
 }
 
-$query="select * from candidate_register where candidateid_number ='$cid'";
+$query = "SELECT * FROM candidate_register WHERE Candidateid_number ='$cid'";
+$result = mysqli_query($conn, $query);
 
-$result=mysqli_query($conn,$query);
-$query1="select Serial_num from candidate_register where  candidateid_number ='$cid'";
-$result1=mysqli_query($conn,$query1);
+$query1 = "SELECT Serial_num FROM candidate_register WHERE Candidateid_number ='$cid'";
+$result1 = mysqli_query($conn, $query1);
 
 $row1 = mysqli_fetch_assoc($result1);
-$sno=$row1["Serial_num"];
-$query2="select * from party_register where Serial_num='$sno'";
-$result2=mysqli_query($conn,$query2);
+$sno = $row1["Serial_num"];
+$query2 = "SELECT * FROM party_register WHERE Serial_num='$sno'";
+$result2 = mysqli_query($conn, $query2);
 
 //echo "<script>console.log($sno)</script>";
 ?>

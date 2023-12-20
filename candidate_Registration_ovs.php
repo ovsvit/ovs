@@ -73,7 +73,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   }
   #home
   {
-    margin-top:40px;
+    margin-top:42px;
   }
   #login
   {

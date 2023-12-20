@@ -148,7 +148,7 @@ nav {
                         ?>
                         
                           <div class="detail">
-                          <center>  <h3>Personnal Details</h3></center>
+                          <center>  <h3>Personal Details</h3></center>
                             <td> <?php echo '<img class="img" src="data:image;base64,'.base64_encode($row['Photo']).'   "  alt="img" style="width:150px; height:200px;">';?></td><br>
                             <td  id="h1"><b>Firstname :</b></td>
                                 <td><?php echo $row['Firstname'] ?></td><br><br>

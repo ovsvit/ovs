@@ -191,9 +191,7 @@ chart.render();
         <nav>
             <h1> ONLINE VOTING SYSTEM</h1>
             
-            <ul >
-                <li ><a href="adminhome.php">Home</a></li>
-                <li>|</li>
+            <ul>
                 <li><a href="home1.html">Logout</a></li>
             </ul>    
         </nav>     

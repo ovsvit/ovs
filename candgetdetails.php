@@ -133,7 +133,7 @@ nav {
            <div class="option">
                <nav>
                    <ul>
-                       <li><h3><a href="candidatehomepage.html">Home</a></h3></li>
+                       <li><h3><a href="candidatehomepage.php">Home</a></h3></li>
                        <li><h3>|</h3></li>
                        <li>  <h3><a href="home1.html">Logout</a></h3></li>
                    </ul>

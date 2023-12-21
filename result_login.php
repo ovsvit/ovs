@@ -128,6 +128,8 @@ nav {
    
     <button type="submit" CLASS="btn">submit</button>
     </div>
+    <center>
+    
          <div class="option">
         <nav>
 
@@ -138,6 +140,7 @@ nav {
             </ul>
         </nav>
     </div>
+    </center>
 </form>
   </center>
    

@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script type='text/javascript'>alert('ERROR : CAN'T UPDATE THE DATA IN THE DATABASE...')</script>";
     } else {
         echo "<script type='text/javascript'>alert('SUCCESSFULLY REQUESTED AND UPDATED :)')</script>";
-        header("Location: candidateviewprofile.php");
+        header("Location: candgetdetails.php");
 exit;
 
     }

@@ -2,13 +2,11 @@
 session_start();
 include("db.php");
 
-if(isset($_POST['vid']))
-{
-    $vid=$_POST['vid'];
-    
+if (isset($_GET['username'])) {
+  $cid = $_GET['username'];
 }
 
-$query="select * from voter_register where VoterID_number ='$vid'";
+$query="select * from voter_register where VoterID_number ='$cid'";
 $result=mysqli_query($conn,$query);
 //$row = mysqli_fetch_array($result);
 ?>

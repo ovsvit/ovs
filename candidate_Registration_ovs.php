@@ -234,7 +234,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
         <h4 id="home">
           Go to
           <a
-            href="#"
+            href="candidatehomepage.php"
             
             >Home</a
           >

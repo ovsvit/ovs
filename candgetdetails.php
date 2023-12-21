@@ -1,8 +1,14 @@
 <?php
+
+session_start();
 include("db.php"); // Include your database connection file
 
-if (isset($_POST['cid'])) {
-    $cid = $_POST['cid'];
+
+
+
+
+if (isset($_GET['username'])) {
+    $cid = $_GET['username'];
 }
 
 $query = "SELECT * FROM candidate_register WHERE Candidateid_number ='$cid'";

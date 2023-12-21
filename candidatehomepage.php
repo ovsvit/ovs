@@ -1,15 +1,11 @@
 <?php
-session_start(); // Start the session (if not already started)
-
-// Check if the 'username' parameter is set in the URL
+session_start(); 
 if (isset($_GET['username'])) {
-    // Retrieve the username from the URL
+  
     $usernameFromURL = $_GET['username'];
 
-    // Use the username as needed (e.g., display it on the page)
     echo "Welcome, $usernameFromURL!";
 } else {
-    // Handle the case where 'username' parameter is not set
     echo "Username not found in the URL.";
 }
 ?>

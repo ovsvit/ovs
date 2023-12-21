@@ -129,7 +129,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             <h1> Online Voting System</h1>
             
             <ul >
-                <li ><a href="candidatehomepage.html">Home</a></li>
+                <li ><a href="candidatehomepage.php">Home</a></li>
                 <li>|</li>
                 <li><a href="home1.html">Logout</a></li>
             </ul>    

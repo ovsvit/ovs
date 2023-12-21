@@ -1,3 +1,22 @@
+<?php
+session_start(); // Start the session (if not already started)
+
+// Check if the 'username' parameter is set in the URL
+if (isset($_GET['username'])) {
+    // Retrieve the username from the URL
+    $usernameFromURL = $_GET['username'];
+
+    // Use the username as needed (e.g., display it on the page)
+    echo "Welcome, $usernameFromURL!";
+} else {
+    // Handle the case where 'username' parameter is not set
+    echo "Username not found in the URL.";
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +93,7 @@
         <div class="links">
             <ul class="body_nav">
                 <div class="my_profile">
-                    <li><a href="candidateviewprofile.php"><img src="my_profile.jpg"><br><center>Candidate Profile</center></a></li>
+                <li><a href="candgetdetails.php?username=<?php echo urlencode($usernameFromURL); ?>"><img src="my_profile.jpg"><br><center>Candidate Profile</center></a></li>
                 </div>
             </ul>
         </div>
@@ -82,7 +101,7 @@
         <div class="links">
             <ul class="body_nav">
                 <div class="update_cre">
-                    <li><a href="update_cand_password.php"><img src="credential.jpg"><br><center>Update Password</center></a></li>
+                <li><a href="update_cand_password.php?username=<?php echo urlencode($usernameFromURL); ?>"><img src="credential.jpg"><br><center>Update Password</center></a></li>
                 </div>
             </ul>
         </div>

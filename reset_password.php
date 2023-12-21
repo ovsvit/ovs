@@ -146,7 +146,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             
         </b>
         
-        <form method="POST" action="voterlogin.php" class="form">
+        <form method="POST" class="form">
             <div>
                 <label class="label">Username:</label>
                 <input class="inp" type="text" id="u" name="u" placeholder="Enter your username" >

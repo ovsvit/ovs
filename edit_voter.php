@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<script type='text/javascript'>alert('ERROR: CAN\'T UPDATE THE DATA IN THE DATABASE...')</script>";
         } else {
             echo "<script type='text/javascript'>alert('SUCCESSFULLY UPDATED :)')</script>";
-            header("Location: getdetails.php");
+              header("Location: getdetails.php?username=" . urlencode($voter_id));
 exit;
 
         }

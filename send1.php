@@ -12,12 +12,12 @@ if(isset($_POST["send"])){
     $mail->isSMTP();
     $mail->Host='smtp.gmail.com';
     $mail->SMTPAuth=true;
-    $mail->Username='jumanabegum.m2021@vitstudent.ac.in';
-    $mail->Password='lxbkooykizcjkgbs';
+    $mail->Username='ovsgproject@gmail.com';
+    $mail->Password='vozifmqbfpbzunfu';
     $mail->SMTPSecure='ssl';
     $mail->Port=465;
 
-    $mail->setFrom('jumanabegum.m2021@vitstudent.ac.in');
+    $mail->setFrom('ovsgproject@gmail.com');
 
     $mail->addAddress($_POST["email"]);
 

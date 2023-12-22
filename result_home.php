@@ -219,9 +219,17 @@ chart.render();
                                             ?>
                                               <td><?php echo $row['Candidateid_number']; ?></td>
                                               <td><?php echo $row['Firstname']; ?></td>
-                                              <td><?php echo $row['Photo']; ?></td>
-					      <td><?php echo $row['Partyname']; ?></td>
-                                              <td><?php echo $row['Symbol']; ?></td>
+                                              <td>
+                                                  <img src="data:image/jpeg;base64,
+                                                  <?php echo base64_encode($row['Photo']);?>"
+                                                  alt="img" width="100" height="100">
+                                             </td>
+					    <td><?php echo $row['Partyname']; ?></td>
+                                              <td>
+                                                  <img src="data:image/jpeg;base64,
+                                                  <?php echo base64_encode($row['Symbol']);?>"
+                                                  alt="img" width="100" height="100">
+                                             </td>
                                               <td><?php echo $row['Principles']; ?></td>
                                               <td><?php echo $row['Vote_count']; ?></td>
                                               </tr>     

@@ -184,8 +184,8 @@ body
         
         <h4 id="home">
           Go to
-          <a
-            href="
+          <a  href="voterhome.php?username=<?php echo urlencode($home)?>"
+            
             target="-blank"
             >Home</a
           >

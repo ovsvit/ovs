@@ -90,7 +90,7 @@ td{
         <nav>
             <h1> Online Voting System</h1>
             <ul class="head_nav">
-                <li class="head_list"><a  href="voterhome.php?username=<?php echo urlencode($cid)?>">Home</a></li>
+                <li class="head_list"><a  href="voterhome.php?username=<?php echo urlencode(null)?>">Home</a></li>
                 <li>|</li>
                 <li><a href="home1.html">Logout</a></li>
             </ul>    

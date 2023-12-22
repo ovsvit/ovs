@@ -145,7 +145,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             
         </b>
         
-        <form method="POST" action="candidatehomepage.html" class="form">
+        <form method="POST" action="candidatehomepage.php" class="form">
             <div>
                 <label class="label">Username:</label>
                 <input class="inp" type="text" id="u" name="u" placeholder="Enter your username" >

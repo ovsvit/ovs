@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   $pincode= $_POST['pincode'];
   $nationality=$_POST['nationality'];
    $photo=$_POST['photo'];
-  $home="voterhomepage";
+  
   
 
   $query="insert into voter_register(Firstname,Lastname,Voterid_number,Aadhar_number,DOB,Age,Gender,Phone_number,Email,Door_number,Street,City,Pincode,Nationality,Photo,Status) 
@@ -28,6 +28,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   header("Location:voter_pwcreation.php");
  
 }
+  $home="voterhomepage";
 ?>
 <html lang="en">
   <head>

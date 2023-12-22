@@ -8,11 +8,24 @@ if(isset($_POST['vid']) && isset($_GET['id']) )
     $id=$_GET['id'];
     
 }
+
+
 $query1="select Status from voter_register where VoterID_number ='$vid' ";
 
 $result1=mysqli_query($conn,$query1);
+if(mysqli_num_rows($result1) === 1)
+{
 $row1 = mysqli_fetch_assoc($result1);
 $Status= $row1['Status'];
+}
+else
+{
+    echo '<script>';
+    echo 'alert("Voter ID number is invalid");';
+    echo 'window.location.href = "home1.html";';
+    echo '</script>';
+  
+}
 
 $query2="select Vote_count from party_register where Serial_num='$id'";
 $result2=mysqli_query($conn,$query2);

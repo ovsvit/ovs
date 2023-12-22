@@ -141,7 +141,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
    
     <fieldset class="field">
         <b>
-            <legend> <h2 text-align: center>Update password </h2></legend>
+            <legend> <h2 text-align: center>Reset password </h2></legend>
                
             
         </b>

@@ -19,6 +19,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
  $query="UPDATE candidate_login SET password='$a' where username='$u'";
  mysqli_query($conn,$query);
+ header("Location: candidatehomepage.php?username=" . urlencode($candidate_id));
 }
 
 
@@ -145,7 +146,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             
         </b>
         
-        <form method="POST" action="candidatehomepage.php" class="form">
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form">
             <div>
                 <label class="label">Username:</label>
                 <input class="inp" type="text" id="u" name="u" placeholder="Enter your username" >

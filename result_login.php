@@ -1,3 +1,24 @@
+<?php
+session_start();
+include("db.php");
+if($_SERVER['REQUEST_METHOD']== 'POST')
+{
+  $firstname= $_POST['user'];
+   $Aadharnumber= $_POST['aadhar'];
+  $nationality=$_POST['nation'];
+  
+  
+
+  $query="insert into result_login(Name,Aadhar_number,Nationality) values('$firstname','$Aadharnumber','$nationality')";
+  mysqli_query($conn,$query);
+
+  header("Location:adminhome.php");
+  //action="adminhome.php"
+ 
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +116,7 @@ nav {
    
 </div>
   
-    <form action="resultlogincheck.php" method="POST" class="form">
+    <form  method="POST" class="form">
 <center>
 <h2 style="margin-top: 0px; color:black " >Result view login form</h2>
     <img src="login.png" width="100px" >

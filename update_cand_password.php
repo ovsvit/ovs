@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
  $query="UPDATE candidate_login SET password='$a' where username='$u'";
  mysqli_query($conn,$query);
- header("Location: candidatehomepage.php?username=" . urlencode($candidate_id));
+ header("Location: candidatehomepage.php?username=" . urlencode($u));
 }
 
 
@@ -130,7 +130,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             <h1> Online Voting System</h1>
             
             <ul >
-                <li ><a href="candidatehomepage.php">Home</a></li>
+                <li ><a href="candidatehomepage.php?username=". urlencode($u)>Home</a></li>
                 <li>|</li>
                 <li><a href="home1.html">Logout</a></li>
             </ul>    

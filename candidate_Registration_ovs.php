@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   $pincode= $_POST['pincode'];
   $nationality=$_POST['nationality'];
   $img_name=$_POST['photo'];
-  $home="candidatehomepage";
+ 
    //echo "  $img_name";
    //$img_tmp_name=$_FILES['photo']['tmp_name'];
    //echo " $img_tmp_name";
@@ -32,6 +32,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   header("Location:candidate_party_details.php");
  
 }
+   $home="candidatehomepage";
 ?>
 <html lang="en">
   <head>

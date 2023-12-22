@@ -18,6 +18,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   $pincode= $_POST['pincode'];
   $nationality=$_POST['nationality'];
    $photo=$_POST['photo'];
+  $home="voterhomepage";
   
 
   $query="insert into voter_register(Firstname,Lastname,Voterid_number,Aadhar_number,DOB,Age,Gender,Phone_number,Email,Door_number,Street,City,Pincode,Nationality,Photo,Status) 
@@ -184,7 +185,7 @@ body
         <h4 id="home">
           Go to
           <a
-            href="home1.html"
+            href="
             target="-blank"
             >Home</a
           >

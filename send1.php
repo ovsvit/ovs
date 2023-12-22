@@ -33,7 +33,7 @@ if(isset($_POST["send"])){
       $mail->Body ="<b>Dear User</b>
       <h3>We received a request to reset your password.</h3>
       <p>Kindly click the below link to reset your password</p>
-      http://localhost/mailSend/reset_password.php
+      http://localhost/OVS_git/ovs/reset_password_cand.php
       <br><br>
       <p>With regrads,</p>
       <b>Programming with Lam</b>";

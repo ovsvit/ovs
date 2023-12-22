@@ -18,6 +18,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   $pincode= $_POST['pincode'];
   $nationality=$_POST['nationality'];
   $img_name=$_POST['photo'];
+  $home="candidatehomepage";
    //echo "  $img_name";
    //$img_tmp_name=$_FILES['photo']['tmp_name'];
    //echo " $img_tmp_name";
@@ -228,13 +229,13 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   <body>
     <h2 id="topic">Welcome to Online Voting..</h2>
     <div class="container">
-      <form  method="POST" id="formc" form="formc"  enctype="multipart/form-data">
+      <form  method="POST" id="formc"   enctype="multipart/form-data">
         <h2 id="acc">Create Your Account..</h2>
         
         <h4 id="home">
           Go to
           <a
-            href="candidatehomepage.php"
+           href="candidatehomepage.php?username=<?php echo urlencode($home)?>"
             
             >Home</a
           >

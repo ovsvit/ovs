@@ -107,7 +107,7 @@ nav {
            <div class="option">
                <nav>
                    <ul>
-                       <li><h3><a  href="voterhome.php?home=<?php echo urlencode($home)?>">Home</a></h3></li>
+                       <li><h3><a  href="voterhome.php?username=<?php echo urlencode($home)?>">Home</a></h3></li>
                        <li><h3>|</h3></li>
                        <li>  <h3><a href="home1.html">Logout</a></h3></li>
                    </ul>

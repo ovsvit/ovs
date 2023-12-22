@@ -40,7 +40,7 @@ $vote_count=$vote_count+1;
 
 $query4="update party_register set Vote_count=$vote_count  where Serial_num='$id'";
 $result=mysqli_query($conn,$query4);
-header("Location: votesuccess.php");
+header("Location: conf_mail.php");
 }
 else
 {

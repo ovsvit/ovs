@@ -4,6 +4,7 @@ $query1 = "select Partyname,Principles,Symbol from party_register";
 $query2 = "select Candidateid_number,Photo from candidate_register";
 $result1 = mysqli_query($con, $query1);
 $result2 = mysqli_query($con, $query2);
+$home="voterhomepage";
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +92,7 @@ $result2 = mysqli_query($con, $query2);
         <nav>
             <h1> Online Voting System</h1>
             <ul class="head_nav">
-                <li class="head_list"><a href="voterhome.php">Home</a></li>
+                <li class="head_list"><a  href="voterhome.php?username=<?php echo urlencode($home)?>">Home</a></li>
                 <li>|</li>
                 <li><a href="home1.html">Logout</a></li>
             </ul>

@@ -6,7 +6,7 @@ $conn=mysqli_connect("localhost","root","","ovs") or die(mysqli_error($conn));
 //$result=mysqli_query($conn,$query);
 $query="select Serial_num,Partyname,Symbol from party_register";
 $result=mysqli_query($conn,$query);
-$vid="votecast";
+$vid="voterhomepage";
 ?>
 
 <!DOCTYPE html>

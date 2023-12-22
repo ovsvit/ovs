@@ -1,35 +1,36 @@
-
-
 <?php
 session_start();
 include("db.php");
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $fieldname = $_POST['field'];
-    $candidate_id = $_POST['candidate_id'];
-    $existingval = $_POST['old'];
-    $newval = $_POST['new'];
-    $proof = $_POST['proof'];
+    // Check if the keys exist in $_POST
+    $fieldname = isset($_POST['field']) ? $_POST['field'] : '';
+    $candidate_id = isset($_POST['candidate_id']) ? $_POST['candidate_id'] : '';
+    $existingval = isset($_POST['old']) ? $_POST['old'] : '';
+    $newval = isset($_POST['new']) ? $_POST['new'] : '';
+    $proof = isset($_POST['proof']) ? $_POST['proof'] : '';
+
+
+
     
-
-
-    $updateQuery = "UPDATE candidate_register SET $fieldname = '$newval' WHERE Candidateid_number = '$candidate_id' AND $fieldname = '$existingval'";
-    $result2 = mysqli_query($conn, $updateQuery);
-
-   
-    if (!$result2) {
-        die('MySQL Error: ' . mysqli_error($conn));
-        echo "<script type='text/javascript'>alert('ERROR : CAN'T UPDATE THE DATA IN THE DATABASE...')</script>";
+    if (!$fieldname || !$candidate_id || !$existingval || !$newval) {
+      
     } else {
-        echo "<script type='text/javascript'>alert('SUCCESSFULLY REQUESTED AND UPDATED :)')</script>";
-       header("Location: candgetdetails.php?username=" . urlencode($candidate_id));
-        
-exit;
+        $updateQuery = "UPDATE candidate_register SET $fieldname = '$newval' WHERE Candidateid_number = '$candidate_id' AND $fieldname = '$existingval'";
+        $result2 = mysqli_query($conn, $updateQuery);
 
+        if (!$result2) {
+            die('MySQL Error: ' . mysqli_error($conn));
+            echo "<script type='text/javascript'>alert('ERROR: CAN'T UPDATE THE DATA IN THE DATABASE...')</script>";
+        } else {
+            echo "<script type='text/javascript'>alert('SUCCESSFULLY REQUESTED AND UPDATED :)')</script>";
+            header("Location: candgetdetails.php?username=" . urlencode($candidate_id));
+            exit;
+        }
     }
-} 
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

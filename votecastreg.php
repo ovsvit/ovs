@@ -13,7 +13,7 @@ $query1="select Status from voter_register where VoterID_number ='$vid' ";
 $result1=mysqli_query($conn,$query1);
 $row1 = mysqli_fetch_assoc($result1);
 $Status= $row1['Status'];
-echo "<script>console.log($status);</script>";
+
 $query2="select Vote_count from party_register where Serial_num='$id'";
 $result2=mysqli_query($conn,$query2);
 $row2= mysqli_fetch_assoc($result2);

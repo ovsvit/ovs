@@ -8,7 +8,7 @@ if(isset($_POST['vid']) && isset($_GET['id']) )
     $id=$_GET['id'];
     
 }
-echo "<script>console.log($vid);</script>";
+
 
 $query1="select Status from voter_register where VoterID_number ='$vid' ";
 

@@ -16,10 +16,12 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
     mysqli_stmt_bind_param($stmt, "ss", $u, $a);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);*/
-
- $query="UPDATE candidate_login SET password='$a' where username='$u'";
- mysqli_query($conn,$query);
- header("Location: candidatehomepage.php?username=" . urlencode($u));
+if(!$u==''){
+    $query="UPDATE candidate_login SET password='$a' where username='$u'";
+    mysqli_query($conn,$query);
+    header("Location: candidatehomepage.php?username=" . urlencode($u));
+}
+ 
 }
 
 
@@ -295,18 +297,3 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 </script>
 </html>
 
-
-<div class="bd-dark">
-         <div class="container">
-             <div class="row">
-                <div class="col">
-                   <div class="card mt-5">
-                       <div class="card-header">
-
-                       </div>
-                    </div>
-                </div>
-            </div>
-         </div>
-
-     </div>

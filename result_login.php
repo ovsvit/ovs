@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
   $query="insert into result_login(Name,Aadhar_number,Nationality) values('$firstname','$Aadharnumber','$nationality')";
   mysqli_query($conn,$query);
 
-  header("Location:result_home.php");
+  header("Location:time.php");
   //action="adminhome.php"
  
 }

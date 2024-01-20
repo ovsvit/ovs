@@ -130,7 +130,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             <h1> Online Voting System</h1>
             
             <ul >
-                <li ><a href="candidatelogin.html">Home</a></li>
+                <li ><a href="candidatelogin.php">Home</a></li>
                 <li>|</li>
                 <li><a href="home1.html">Logout</a></li>
             </ul>    
@@ -146,7 +146,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             
         </b>
         
-        <form method="POST" class="form">
+        <form method="POST" action="candidatelogin.php" class="form">
             <div>
                 <label class="label">Username:</label>
                 <input class="inp" type="text" id="u" name="u" placeholder="Enter your username" >
@@ -285,18 +285,3 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 </script>
 </html>
 
-
-<div class="bd-dark">
-         <div class="container">
-             <div class="row">
-                <div class="col">
-                   <div class="card mt-5">
-                       <div class="card-header">
-
-                       </div>
-                    </div>
-                </div>
-            </div>
-         </div>
-
-     </div>

@@ -19,7 +19,10 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
 
  $query="UPDATE candidate_login SET password='$a' where username='$u'";
  mysqli_query($conn,$query);
- echo "<script type='text/javascript'>alert('Your new password is set successfully')</script>";
+ echo "<script type='text/javascript'>alert('Your new password is set successfully')
+ document.location.href='candidatelogin.php';
+ </script>";
+ 
 }
 
 
@@ -146,7 +149,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST')
             
         </b>
         
-        <form method="POST" action="candidatelogin.php" class="form">
+        <form method="POST"  class="form">
             <div>
                 <label class="label">Username:</label>
                 <input class="inp" type="text" id="u" name="u" placeholder="Enter your username" >

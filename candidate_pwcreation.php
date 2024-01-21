@@ -192,15 +192,15 @@ height:70px;
 
     </div>
     
-  
+    </form>
 </body>
-</form>
+
 <script>
 
 const form = document.getElementById("form");
 const pw = document.getElementById("pw");
 const repw= document.getElementById("repw");
-const voterid= document.getElementById("voterid");
+const candidateid= document.getElementById("candidateid");
  form.addEventListener("submit", (e) => {
   if (!validateInputs()) {
     e.preventDefault();
@@ -212,19 +212,19 @@ const voterid= document.getElementById("voterid");
 
  function validateInputs() {
   let suc = true;
-  const voterids=voterid.value.trim();
+  const candidateids=candidateid.value.trim();
   const password = pw.value.trim();
   const repassword = repw.value.trim();
 
 
-  if (voterids === "") {
+  if (candidateids === "") {
     suc = false;
-    seterror(voterid, "Voterid number is required");
-  } else if (voterids.length < 10 || voterids.length > 10) {
+    seterror(candidateid, "Candidateid number is required");
+  } else if (candidateids.length < 10 || candidateids.length > 10) {
     suc = false;
-    seterror(voterid, "Voter ID number must be 10 characters");
+    seterror(candidateid, "Candidateid ID number must be 10 characters");
   } else {
-    setsuccess(voterid);
+    setsuccess(candidateid);
   }
 
   if (password === "") {
@@ -244,7 +244,7 @@ const voterid= document.getElementById("voterid");
     suc = false;
     seterror(repw, "Re-enter your password");
   }
-  else if(password .length<8 || !checkpass(password) )
+  else if(password.length<8 || !checkpass(password) )
   {
     suc = false;
     seterror(repw, "Provide a strong password");
